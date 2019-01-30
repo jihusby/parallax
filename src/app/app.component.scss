@@ -1,11 +1,13 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
   }
   
   .topnav {
     overflow: hidden;
     background-color: #333;
+    width:100% !important;
   }
   
   .topnav a {
@@ -56,15 +58,194 @@ body {
 
 //-------------------------------------------------------
 #myTopnav {
-    background-color: blue;
-    color: red;
+  top: 0px;
+  position: fixed;
+  margin-left: 0px;
+  float:right;
+  z-index: 1000;
 }
 
-#parallax-1 {
-    width: 800px;
-    height: 300px;
-    background-color:yellow;
+//---------------------CONTENT-MAIN-----------------------
+.banner-1 {
+  color: white;
+  font-size: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
 }
-#parallax-1-label {
-    
+
+.numbers-1 {
+  font-size: 200%;
+  font-weight: bold;
+  color: orange;
+  padding: 20px 20px 20px 20px;
 }
+
+.article-1 {
+  font-size: 60%;
+  padding: 20px 20px 20px 20px;
+}
+
+.outer-wrapper {
+  margin-top: 50px;
+  margin: auto;
+  width: 100%;
+  color: #444;
+}
+
+.inner-wrapper {
+  margin-top: 50px;
+  margin: auto;
+  width: 870px;
+  color: #444;
+
+}
+
+.wrapper {
+    margin: auto;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(4, [col] 25% ) ;
+    grid-template-rows: repeat(3, [row] auto  );
+    background-color: lightyellow;
+    color: #444;
+  }
+
+  .box {
+      background-color: #444;
+      color: #fff;
+      border-radius: 0px;
+      padding: 20px;
+      font-size: 150%;
+      z-index:10;
+
+  }
+
+  .a-parallax-1 {
+      margin-top: 50px;
+      padding: 110px 30px 30px 30px;
+      /* The image used */
+      background-image: url("../assets/parallax-1.jpg");
+
+      /* Set a specific size */
+      width: 870px; 
+      height: 300px;
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+
+  .front-banner {
+    margin: auto;
+    width: 70%;
+    background-color: gray;
+    opacity: 0.6;
+    text-align: center;
+    padding: 10px 20px 10px 20px; ;
+  }
+
+  .b-ansatte {
+    width: 870px;
+    height: 200px;
+    margin:  auto;
+    padding: 0px;   
+  }
+
+  .ansatte-left {
+    width: 40%;
+    height: 200px;
+    float: left;    
+  }
+
+  .ansatte-right {
+    margin-left: 40%;
+    height: 200px;
+  }
+
+  .c-parallax-2 {
+    grid-column: col / span  9;
+    grid-row: row 3;
+    /* The image used */
+    background-image: url("../assets/parallax-1.jpg");
+
+    /* Set a specific size */
+    width: 870px;
+    height: 200px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .d-success {
+      grid-column: col 1 / span  8;
+      grid-row: row 4 ;
+      padding: 10px 0px 10px 0px;
+      margin: auto;
+      width: 870px;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(4, [col] 210px ) ;
+      grid-template-rows: repeat(3, [row] auto  );
+      color: #444;
+  }
+
+  @mixin success($row, $col) {
+    padding: 34px 0;
+    text-align: center;
+    height: 100px;
+    border: 1px gray solid;
+    grid-column: col $col / span  1;
+    grid-row: row $row;
+  }
+  .success-1 {
+    @include success(1,1);
+  }
+  .success-2 {
+    @include success(1,2);
+  }
+  .success-3 {
+    @include success(1,3);
+  }
+  .success-4 {
+    @include success(1,4);
+  }
+  .success-5 {
+    @include success(2,1);
+  }
+  .success-6 {
+    @include success(2,2);
+  }
+  .success-7 {
+    @include success(2,3);
+  }
+  .success-8 {
+    @include success(2,4);
+  }
+  .success-9 {
+    @include success(3,1);
+  }
+  .success-10 {
+    @include success(3,2);
+  }
+  .success-11 {
+    @include success(3,3);
+  }
+  .success-12 {
+    @include success(3,4);
+  }
+
+  .e-work {
+    min-height: 100px;
+  }
+
+  .f-contact {
+    min-height: 100px;
+  }
+
+  .bottom-line {
+    width: 100%;
+    border-bottom: 1px solid gray;
+  }
